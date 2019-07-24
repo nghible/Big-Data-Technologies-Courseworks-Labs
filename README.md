@@ -14,3 +14,9 @@ Mark: 91/100
 Requirements in "Coursework2_2019.pdf" file: mongoDB queries, Apache Spark queries, and Apache Hive queries.
 
 Mark: 83/100
+
+## Labs
+
+### Lab 3: MRJobs
+
+Requirements in "Lab3.pdf": some other MapReduce jobs.
