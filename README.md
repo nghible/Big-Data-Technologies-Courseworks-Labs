@@ -20,3 +20,5 @@ Mark: 83/100
 ### Lab 3: MRJobs
 
 Requirements in "Lab3.pdf": some other MapReduce jobs.
+
+More lab work incoming ...
