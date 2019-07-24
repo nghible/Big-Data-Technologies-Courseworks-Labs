@@ -1,4 +1,4 @@
-# Big-Data-Technologies-Courseworks
+# Big Data Technologies Courseworks and Labs
 Coursework submission in Big Data Technologies class at King's College London.
 
 Coursework requirement and submission inside each folder.
