@@ -1,0 +1,8 @@
+SELECT user, COUNT(*) FROM (SELECT user, query FROM logs WHERE query LIKE '%business') AS table GROUP BY user;
+
+# Output:
+
+02E76389CBC661F7	4
+0B294E3062F036C3	11
+74165896F4654D30	2
+Time taken: 24.963 seconds, Fetched: 3 row(s)

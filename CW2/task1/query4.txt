@@ -1,0 +1,9 @@
+# Write a query that returns the average ratio between numbers of followers and
+# number of friends, over all documents. Note that the number of followers must be >0 for
+# the ratio to be defined.
+
+db.cl.aggregate([ { $match: { "friendsCount": { $gt: 0 } } }, { $project: { _id: 0, name: "$displayName",ratio: {$divide: ["$followersCount", "$friendsCount"] } } }, {$group: {_id:null, AverageRatios: {$avg: "$ratio"} } }, {$project: {_id:0, AverageRatios: 1} } ])
+
+#Output:
+
+{ "AverageRatios" : 156.2146935903003 }

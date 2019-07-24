@@ -1,0 +1,13 @@
+# Connect to MongoDB by opening another terminal and enter the line below:
+
+mongod --dbpath=./'Big Data Coursework'/CW2
+
+# Load the file in
+
+mongoimport --db cw2 --collection cl --drop --file ~/Downloads/'Big Data Coursework'/CW2/championsleague_1.json
+
+# Output
+
+2019-03-11T16:40:49.476+0000    connected to: localhost
+2019-03-11T16:40:49.477+0000    dropping: cw2.cl
+2019-03-11T16:40:49.750+0000    imported 23285 documents

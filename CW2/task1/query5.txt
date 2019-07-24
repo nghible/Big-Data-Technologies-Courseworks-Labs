@@ -1,0 +1,9 @@
+# Write a query that returns the number of users who have at least 1000 friends,
+# posted a tweet (the field verb has the value "post") and whose tweet (field body)
+# contains the string “Madrid” (even as part of a word).
+
+db.cl.aggregate([ { $match: { friendsCount: { $gte: 1000 }, verb: "post", body: /Madrid/ }  }, {$group:{_id:"$displayName"} }, {$count: "number_of_users"} ])
+
+# Output:
+
+{ "number_of_users" : 124 }

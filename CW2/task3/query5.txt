@@ -1,0 +1,5 @@
+SELECT COUNT(DISTINCT user) FROM logs WHERE query != '' AND (from_unixtime(UNIX_TIMESTAMP(time,'yyMMddHHmmss'), 'HH:mm:ss') BETWEEN '21:00:00' and '22:59:59');
+
+# Output:
+
+67

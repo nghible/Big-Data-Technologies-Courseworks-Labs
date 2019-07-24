@@ -1,0 +1,5 @@
+SELECT user, COUNT(*) AS Visits FROM logs GROUP BY user SORT BY Visits DESC LIMIT 1;
+
+# Output:
+
+128315306CE647F6	78

@@ -1,0 +1,20 @@
+CREATE DATABASE log_db;
+
+USE log-db;
+
+CREATE TABLE logs
+(user VARCHAR(20),
+time VARCHAR(20),
+query CHAR(255))
+ROW FORMAT DELIMITED
+FIELDS TERMINATED BY '\t'
+STORED AS TEXTFILE;
+
+LOAD DATA LOCAL INPATH 'query_logs.txt' INTO TABLE logs;
+
+# Output:
+
+Loading data to table log_db.logs
+Table log_db.logs stats: [numFiles=1, totalSize=204599]
+OK
+Time taken: 0.944 seconds

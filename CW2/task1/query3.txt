@@ -1,0 +1,8 @@
+# Write a query that returns the average number of followers of users with more than
+# 100000 friends.
+
+db.cl.aggregate ([ { $match: { "friendsCount": { $gt : 100000 } } }, { $group: { _id:"$displayName", LastFollowers: {$last: "$followersCount" } } }, {$group: {_id: null, TotalAvgFollowers: {$avg: "$LastFollowers"} } }, {$project: {_id: 0, TotalAvgFollowers: 1 } } ])
+
+# Output:
+
+{ "TotalAvgFollowers" : 528580.125 }

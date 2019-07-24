@@ -1,0 +1,14 @@
+db.cl.aggregate([{ $match: {statusesCount: {$gt: 200, $lt: 203 } } }, {$group: {_id: "$displayName", followersCount: {$last: "$followersCount"} } }, {$project: {_id: 1, followersCount: 1 ,  statusesCount: 1} } ])
+
+#Output
+
+{ "_id" : "Silvia Alonso", "followersCount" : 322 }
+{ "_id" : "Lex van Houten", "followersCount" : 79 }
+{ "_id" : "Bendita Cocina", "followersCount" : 344 }
+{ "_id" : "juan pablo suazo", "followersCount" : 77 }
+{ "_id" : "jUnE 6 MiNe bAbY", "followersCount" : 139 }
+{ "_id" : "emanuele lombardi", "followersCount" : 7 }
+{ "_id" : "Prince-Vejita", "followersCount" : 25 }
+{ "_id" : "Keshav Raghav", "followersCount" : 16 }
+{ "_id" : "Indra J.P. Senaen", "followersCount" : 23 }
+{ "_id" : "DigitalAnniversaries", "followersCount" : 1056 }

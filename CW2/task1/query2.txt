@@ -1,0 +1,20 @@
+# Open another terminal and type:
+
+mongo
+
+# After getting into mongo shell:
+
+use cw2
+
+# Write a query that returns the name, number of followers, and number of friends, of
+# each user with fewer than 25 friends, whose name starts with "A" (case insensitive) and
+# ends with "es" (case sensitive). The results must be sorted in decreasing order of
+# displayName
+
+db.cl.aggregate([ { $match: {$and: [ {"friendsCount": { $lt: 25 } }, { "displayName": /^A/i }, {"displayName": /es$/ } ] } }, { $group:{_id:"$displayName" , displayName: { $last: "$displayName"}, followersCount: {$last: "$followersCount" }, friendsCount: {$last: "$friendsCount"} } }, { $project: {_id: 0 , "displayName": 1, "friendsCount": 1, "followersCount": 1} } ] )
+
+# Output:
+
+{ "displayName" : "Arizona Companies", "followersCount" : 10, "friendsCount" : 0 }
+{ "displayName" : "Adejies", "followersCount" : 10, "friendsCount" : 13 }
+{ "displayName" : "angie torres", "followersCount" : 33, "friendsCount" : 23 }
