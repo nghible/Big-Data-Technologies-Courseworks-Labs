@@ -24,5 +24,5 @@ Requirements in "Lab3.pdf": some other MapReduce jobs.
 More lab work incoming ...
 
 
-Please DO NOT distribute this Coursework as it belongs to King's College London.
-Please DO NOT use my code as submission to your possible future coursework in the same module. This will be PLAGIARISM.
+#Please DO NOT distribute this Coursework as it belongs to King's College London.
+#Please DO NOT use my code as submission to your possible future coursework in the same module. This will be PLAGIARISM.
